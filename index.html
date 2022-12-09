@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<input type="" id="sad">
+<button onclick="bookcode();">Перевести</button>
+<script>
+function bookcode()
+{
+console.log("adbskv");
+var codedres = "";
+var str = document.getElementById("sad").value;
+var key = ["Оставайся в середине круга, и пусть все вещи следуют своим путем",
+           "Ненависть – удел побежденных.",
+           "Где человек находится противясь, там его тюрьма", 
+           "отверзлись вещие зеницы",
+           "Привет, мир!"];
+var p;
+var check = 0;
+for(var i = 0; i < str.length; i++)
+{
+for (var w = 0; w < key.length; w++) 
+{
+p = key[w];
+console.log(p);
+for (var w1 = 0; w1 < p.length; w1++)
+{
+if(check == 1)
+{
+break;
+}
+console.log(p.length);
+if(str[i] == p[w1])
+{
+codedres += "(" + w + ", " + w1 + ")";
+console.log("vkaof");
+check = 1;
+break;
+}
+}
+if(check == 1)
+break;
+}
+check = 0;
+}
+console.log(str[1]);
+alert(codedres);
+}   
+</script>
+</body>
+</html>
